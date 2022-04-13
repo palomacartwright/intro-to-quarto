@@ -1,0 +1,41 @@
+---
+title: "My Quarto Doc"
+format: html
+editor: visual
+execution: 
+  warning: false
+---
+
+# Intro to Quarto 
+
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+
+library(tidyverse)
+```
+
+```{r}
+#| label: fig-carmiles
+#| fig-cap: "Car gas mileage"
+#| fig-width: 3
+#| fig-height: 3
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point()
+```
+
+This is an awesome graph @fig-carmiles. 
+
+
+```{python}
+
+import seaborn as sns
+
+df = sns.load_dataset("penguins")
+
+```
+
+
+
